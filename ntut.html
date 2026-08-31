@@ -3,6 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="robots" content="noindex, nofollow">
+<meta name="color-scheme" content="light">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
 <title>北科姐妹校來台交流｜CASE 01 · NTUT CLTC</title>
 <style>
@@ -23,7 +24,7 @@
     --ink: var(--foreground); --ink-soft: var(--muted-foreground); --line: var(--border);
   }
   *{ box-sizing:border-box; }
-  html{ scroll-behavior:smooth; }
+  html{ scroll-behavior:smooth; color-scheme:light; }
   body{
     margin:0; min-width:320px; background:var(--cream); color:var(--ink);
     font-family:"Manrope","Noto Sans TC",system-ui,sans-serif; line-height:1.7;
@@ -31,6 +32,7 @@
   }
   a{ color:inherit; text-decoration:none; } button{ font-family:inherit; }
   .en{ font-family:"Manrope","Noto Sans TC",sans-serif; }
+  .hl{ color:var(--orange); font-weight:700; }
   .editorial-title{ font-family:"DM Serif Display","Noto Serif TC",Georgia,serif; font-weight:700; }
   .editorial-link{ position:relative; padding-bottom:4px; }
   .editorial-link::after{ position:absolute; right:0; bottom:0; left:0; height:1px; background:var(--orange); content:""; transform:scaleX(0); transform-origin:right; transition:transform .22s cubic-bezier(.23,1,.32,1); }
@@ -83,6 +85,7 @@
   .exec-item{ margin-bottom:12px; }
   .exec-item b{ display:block; font-size:.86rem; color:rgba(247,245,240,.92); margin-bottom:3px; }
   .exec-item span{ font-size:.85rem; color:rgba(247,245,240,.68); }
+  .exec-item span.hl{ color:var(--orange); font-weight:700; }
   @media (min-width:820px){ .exec-grid{ grid-template-columns:repeat(3,1fr); column-gap:32px; } .exec-col{ border-top:none; padding:8px 0; } .exec-col:last-child{ border-bottom:none; } }
 
   .result-grid{ display:grid; gap:16px; margin-top:8px; }
@@ -193,7 +196,7 @@
         </div>
         <div class="exec-item">
           <b>模組化行程設計</b>
-          <span>將行程拆解為「學術交流、文化體驗、自由行程」三大模組，當成團人數或時間變動時，能快速抽換備案，提升彈性。</span>
+          <span>將行程拆解為「<span class="hl">學術交流、文化體驗、自由行程</span>」三大模組，當成團人數或時間變動時，能快速抽換備案，提升彈性。</span>
         </div>
       </div>
       <div class="exec-col">
