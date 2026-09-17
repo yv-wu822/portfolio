@@ -197,7 +197,7 @@
       <button class="lang-toggle" id="lang-toggle" type="button" aria-label="切換語言">
         <span class="lang-zh is-active">中</span><span class="lang-sep">/</span><span class="lang-en">EN</span>
       </button>
-      <a class="dl-btn" href="resume.pdf" download="吳品儀-簡歷.pdf">
+      <a class="dl-btn" data-resume href="resume.pdf" download="吳品儀-簡歷.pdf">
         <span data-i18n="dl_resume">下載履歷</span>
         <span class="circle"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12"/><path d="M7 10l5 5 5-5"/><path d="M4 19h16"/></svg></span>
       </a>
@@ -390,7 +390,7 @@
 
     <div class="dl-line">
       <p data-i18n="dl_note">完整履歷保留原始 PDF 版本，方便下載與列印。</p>
-      <a class="btn" href="resume.pdf" download="吳品儀-簡歷.pdf">
+      <a class="btn" data-resume href="resume.pdf" download="吳品儀-簡歷.pdf">
         <span data-i18n="dl_full">下載完整履歷</span>
         <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12"/><path d="M7 10l5 5 5-5"/><path d="M4 19h16"/></svg>
       </a>
@@ -504,6 +504,15 @@
     zhLabel.classList.toggle("is-active", lang === "zh");
     enLabel.classList.toggle("is-active", lang === "en");
     document.documentElement.lang = lang === "zh" ? "zh-Hant" : "en";
+    document.querySelectorAll("[data-resume]").forEach(function(el){
+      if(lang === "en"){
+        el.setAttribute("href", "resume-en.pdf");
+        el.setAttribute("download", "Yvonne-Wu-Resume.pdf");
+      } else {
+        el.setAttribute("href", "resume.pdf");
+        el.setAttribute("download", "吳品儀-簡歷.pdf");
+      }
+    });
   }
 
   toggle.addEventListener("click", function(){
